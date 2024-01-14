@@ -249,7 +249,7 @@ importers:
     specifiers:
       '@prisma/client': ^5.0.0
       dotenv-cli: ^7.2.1
-      prisma: ^5.0.0
+      prisma: ^5.6.0
       typescript: ^5.1.6
     dependencies:
       '@prisma/client': 5.6.0_prisma@5.6.0
