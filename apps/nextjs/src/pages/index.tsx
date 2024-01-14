@@ -3,8 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import type { NextRouter } from "next/router";
 import { useRouter } from "next/router";
-import { Typography } from "@mui/material";
-
+import { Typography } from "@mui/material"; 
 import { Error } from "../../components/Error";
 import { Loading } from "../../components/Loading";
 import type { getSpookTypeResult } from "../../types";
