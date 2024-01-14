@@ -46,6 +46,22 @@ model Session {
     user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
+model paragraph {
+    text String
+    id   String @id @default(cuid())
+    index Int
+    spookId String
+    spook Spook @relation(fields: [spookId], references: [id])
+}
+
+model Spook {
+    id     String @id @default(cuid())
+    title String
+    document paragraph[]
+    userId String
+    user   User   @relation(fields: [userId], references: [id])
+}
+
 model User {
     id            String    @id @default(cuid())
     name          String?
@@ -54,6 +70,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
+    spooks        Spook[]
 }
 
 model VerificationToken {
